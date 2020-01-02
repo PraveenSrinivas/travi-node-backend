@@ -36,6 +36,6 @@ app.use((err, req, res, next) => {
  * Register the routes
  */
 
-routes(app);
+// routes(app);
 
 export default app;
