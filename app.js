@@ -32,6 +32,8 @@ app.use((err, req, res, next) => {
     next();
 });
 
+app.route('/notes').get('notebook');
+
 /**
  * Register the routes
  */
