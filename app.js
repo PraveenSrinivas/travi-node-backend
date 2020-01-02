@@ -1,7 +1,7 @@
-import express from 'express';
-// import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
+let express = require('express'),
+    bodyParser = require('body-parser');
 
+// import mongoose from 'mongoose';
 // import routes from './routes/index.js';
 
 const app = express();
@@ -38,4 +38,4 @@ app.use((err, req, res, next) => {
 
 // routes(app);
 
-export default app;
+module.exports = app;
