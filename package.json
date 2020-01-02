@@ -4,13 +4,17 @@
     "description": "Node.js REST Api server",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Hello World\"",
         "start": "nodemon server.js --exec babel-node --presets env",
         "release": "npm run clean && npm run build && npm run serve",
         "clean": "rm -rf dist && mkdir dist",
         "build": "babel . -s -D -d dist --presets env --ignore node_modules",
-        "serve": "node dist/server.js"
+        "serve": "node dist/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "keywords": [
+        "example",
+        "heroku"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Travipraveen/travi-node-backend.git"
@@ -22,6 +26,7 @@
     },
     "homepage": "https://github.com/Travipraveen/travi-node-backend#readme",
     "dependencies": {
+        "body-parser": "^1.19.0",
         "express": "^4.17.1",
         "mongoose": "^5.8.3"
     },
@@ -29,5 +34,8 @@
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.7.0",
         "nodemon": "^2.0.2"
+    },
+    "engines": {
+        "node": "10.x"
     }
 }
